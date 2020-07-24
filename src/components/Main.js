@@ -10,7 +10,7 @@ class Main extends Component {
             <div className="main">
                 <Switch>
                     <Route path="/register" component={Register}/>
-                    <Route path="/login" render={this.getLogin}/>
+                    <Route path="" render={this.getLogin}/>
                     <Route path="/home" render={this.getHome}/>
                 </Switch>
             </div>
