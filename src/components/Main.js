@@ -9,9 +9,9 @@ class Main extends Component {
         return (
             <div className="main">
                 <Switch>
-                    <Route path="/register" component={Register}/>
-                    <Route path="/login" render={this.getLogin}/>
-                    <Route path="/home" render={this.getHome}/>
+                    <Route exact path="/register" component={Register}/>
+                    <Route exact path="/" render={this.getLogin}/>
+                    <Route exact path="/home" render={this.getHome}/>
                 </Switch>
             </div>
         );
@@ -26,7 +26,7 @@ class Main extends Component {
     getHome = () =>{
         return this.props.isLoggedIn
             ? <Home/>
-            : <Redirect to = "/login"/>
+            : <Redirect to = "/"/>
     }
 
 }
